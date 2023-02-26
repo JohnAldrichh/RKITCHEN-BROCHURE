@@ -1,0 +1,166 @@
+using System;
+using System.Collections.Generic;
+
+namespace Calabio_Hands_on
+{
+class program
+{
+    static void Main(string[]args)
+    {
+		Console.WriteLine("----------RKITCHEN------------");
+		
+		Console.WriteLine("********           *	   *	");
+		Console.WriteLine("*       *    	  *	  *		");
+		Console.WriteLine("*        *   	  *	 *		");
+		Console.WriteLine("*        *  	      *	*		");
+		Console.WriteLine("********     	  *	  * 	");
+		Console.WriteLine("*        * 	  	  *		*	");
+		Console.WriteLine("*        *         *	      *	");
+		
+		List<String> inputList = new List<String>();
+        
+        while (true) 
+        {
+            ShowVariant();
+            
+            string userInput = GetUserInput();
+            
+            switch(userInput)
+            {
+                case "M":
+				case "m":
+                Console.WriteLine("*************Rkitchen Variants***************   COPY THIS LINK TO VIEW THE VARIANTS");
+                Console.WriteLine("*************CHILI GARLIC OIL****************       - https://m5.gs/Ylh5VG");
+                Console.WriteLine("********SPICY GARLIC TUYO IN VINEGAR*********       - https://m5.gs/Y3ZzeH ");
+                Console.WriteLine("*************SPICY GARLIC TINAPA*************       - https://m5.gs/VXZ3RX ");
+                Console.WriteLine("*************LEMON GARLIC TINAPA*************       - https://m5.gs/N1ZsTl");
+                Console.WriteLine("****************GARLIC TUYO******************       - https://m5.gs/SXlqS1");
+                Console.WriteLine("*************SWEET & SPICY TUYO**************       - https://m5.gs/cDNJV3");
+                Console.WriteLine("****************GARLIC TINAPA****************       - https://m5.gs/Q0VrU1");
+                Console.WriteLine("*****************BURONG HIPON****************       - https://m5.gs/QlRGQk");
+                Console.WriteLine("***************SPICY BURONG HIPON************       - https://m5.gs/SDVWVX");
+                Console.WriteLine("*****************ADOBONG TINAPA**************       - https://m5.gs/ZEZ5bj");
+                Console.WriteLine("*************SPICY ADOBONG TINAPA************       - https://m5.gs/d3dWYW");
+                Console.WriteLine("*******************BURONG ISDA***************       - https://m5.gs/TWFGWG");
+                Console.WriteLine("*****************SPICY BURONG ISDA***********       - https://m5.gs/MjRvbE");
+				Console.WriteLine("");
+                break;
+                
+                case "B":
+				case "b":
+                Console.WriteLine("Choose your Product: ");
+                string addVariant1 = Console.ReadLine();
+                string addVariant2 = Console.ReadLine();
+                string addVariant3 = Console.ReadLine();
+                Console.WriteLine ("Thank you For Purchasing!!!");
+                Console.WriteLine("");
+                inputList.Add(addVariant1);
+                inputList.Add(addVariant2);
+                inputList.Add(addVariant3);
+                break;
+                
+                case "R":
+				case "r":
+                Console.WriteLine("What Product do you want to remove in your cart: ");
+                String removeVariant = Console.ReadLine();
+                Console.WriteLine ("");
+                Console.WriteLine ("Your product has been successfully removed in the cart!!");
+                Console.WriteLine("");
+                inputList.Remove(removeVariant);
+                break;
+                
+                case "C":
+				case "c":
+                Console.WriteLine("This is all your product in cart: ");
+                foreach(string variant in inputList)
+                Console.WriteLine(variant);
+                Console.WriteLine("");
+                break;
+				
+				
+				case "P":
+				case "p":
+				Console.WriteLine("This is the prices of the variants ");
+				Console.WriteLine("");
+				ShowPrice();
+				break;
+				
+				case "BS":
+				case "bs":
+				Console.WriteLine("This is our Best seller ");
+				Console.WriteLine("");
+				ShowRecommendation();
+				break;
+                
+                case "E":
+				case "e":
+                Console.WriteLine("");
+                Console.WriteLine("Thank you for Purchasing!!!");
+                Console.WriteLine("For puchasing please use this system again 🙂");
+				ShowInformation();
+                return;
+            }
+        }
+    }
+    static void ShowVariant()
+    {
+		Console.WriteLine("Classic Filipino Favorites! Our products are Home Made, All Natural and free of any preservatives!");
+		Console.WriteLine("WELCOME TO RKITCHEN!!!!");
+		Console.WriteLine("");
+        Console.WriteLine("Here is our Variants");
+        Console.WriteLine("M to pick What variant/product you want to purchase");
+        Console.WriteLine("B to add some variant/product");
+        Console.WriteLine("R to remove variant/product");
+        Console.WriteLine("C to view variant/product");
+		Console.WriteLine("P to view the prices of the variant/product");
+		Console.WriteLine("BS to view the Best seller variant/product");
+        Console.WriteLine("E to Exit!");
+        Console.WriteLine("");
+    }
+    static string GetUserInput()
+    {
+        Console.WriteLine("Input: ");
+        string input = (Console.ReadLine());
+        return input;
+    }
+	static void ShowPrice()
+	{
+		        Console.WriteLine("*************PRICE OF THE VARIANTS***************");
+                Console.WriteLine("*************CHILI GARLIC OIL****************  -  280   ");
+                Console.WriteLine("********SPICY GARLIC TUYO IN VINEGAR*********  -  330   ");
+                Console.WriteLine("*************SPICY GARLIC TINAPA*************  -  330  ");
+                Console.WriteLine("*************LEMON GARLIC TINAPA*************  -  330  ");
+                Console.WriteLine("****************GARLIC TUYO******************  -  320  ");
+                Console.WriteLine("*************SWEET & SPICY TUYO**************  -  330  ");
+                Console.WriteLine("****************GARLIC TINAPA****************  -  320  ");
+                Console.WriteLine("*****************BURONG HIPON****************  -  270  ");
+                Console.WriteLine("***************SPICY BURONG HIPON************  -  280  ");
+                Console.WriteLine("*****************ADOBONG TINAPA**************  -  320  ");
+                Console.WriteLine("*************SPICY ADOBONG TINAPA************  -  330   ");
+                Console.WriteLine("*******************BURONG ISDA***************  -  250  ");
+                Console.WriteLine("*****************SPICY BURONG ISDA***********  -  260  ");
+	}
+	static void ShowRecommendation()
+	{
+		        Console.WriteLine("***************BEST SELLER***************");
+		        Console.WriteLine("*************CHILI GARLIC OIL****************  -  280   ");
+                Console.WriteLine("********SPICY GARLIC TUYO IN VINEGAR*********  -  330   ");
+                Console.WriteLine("****************GARLIC TUYO******************  -  320  ");
+                Console.WriteLine("*************SWEET & SPICY TUYO**************  -  330  ");
+                Console.WriteLine("*****************BURONG HIPON****************  -  270  ");
+                Console.WriteLine("*****************ADOBONG TINAPA**************  -  320  ");
+                Console.WriteLine("*************SPICY ADOBONG TINAPA************  -  330   ");
+                Console.WriteLine("*******************BURONG ISDA***************  -  250  ");
+                Console.WriteLine("*****************SPICY BURONG ISDA***********  -  260  ");
+	}
+	static void ShowInformation()
+	{
+	 Console.WriteLine(" FOLLOW US ON INSTAGRAM >>  Link on our Instagram | https://www.instagram.com/rkitchenfood/");
+	 Console.WriteLine(" FOLLOW US ON FACEBOOK >> Link on our Facebook Page | https://m.facebook.com/RKitchenSanAntonio/");
+	 Console.WriteLine(" Contact Number  | 075-222-0048 ");
+	 Console.WriteLine(" Email Address |  contact@rkitchen.ph ");
+	 Console.WriteLine(" Location |  San Vicente, Biñan City ");
+	 Console.WriteLine(" RKitchen Foods Corporation | FDA Approved and Registered Products FDA Certified food Manufacturer License Number: LTO-3000005877303");
+	}	 
+  }
+}
